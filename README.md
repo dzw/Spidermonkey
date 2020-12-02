@@ -33,6 +33,11 @@
 
  - JIT is enabled
  - compiled in RELEASE mode
+#### Build
+ - MozillaBuildSetup-2.2.0.exe
+ - start-shell-msvc2013.bat
+ - cd /d/msys64/tmp/Spidermonkey/js/src/build-win32
+ - ./build.sh
 
 ### Linux
 
