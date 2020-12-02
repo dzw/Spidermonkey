@@ -9650,8 +9650,13 @@ int main() {
 
 ; return 0; }
 EOF
+echo "============================================="
+echo "$ac_compile"
+echo "============================================="
+echo "${CXX-g++} -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext 1>&5"
+
 if { (eval echo configure:9654: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
-  rm -rf conftest*
+  #rm -rf conftest*
   ac_cv_cxx0x_headers_bug="no"
 else
   echo "configure: failed program was:" >&5

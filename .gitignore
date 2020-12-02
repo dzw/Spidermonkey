@@ -61,3 +61,5 @@ js/src/build-linux/*
 ./lib
 js/src/autom4te.cache
 
+/js/src/build_OPT.OBJ
+/js/src/build_DBG.OBJ
