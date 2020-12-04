@@ -55,7 +55,7 @@ rm -f ./config.cache
              --with-android-version=9 \
              --enable-application=mobile/android \
              --with-android-gnu-compiler-version=${GCC_VERSION} \
-             --with-arch=${CPU_ARCH}
+             --with-arch=${CPU_ARCH} \
              --enable-android-libstdcxx \
              --target=${TARGET_NAME} \
              --disable-shared-js \
@@ -72,7 +72,7 @@ rm -f ./config.cache
              --disable-threadsafe
 
 # make
-make -j15
+make -j5
 
 if [[ $develop ]]; then
     rm ../../../include
@@ -132,7 +132,7 @@ rm -f ./config.cache
              --disable-threadsafe
 
 # make
-make -j15
+make -j5
 
 if [[ $develop ]]; then
     rm ../../../include
@@ -158,14 +158,14 @@ fi
 
 }
 
-# Build with armv6
-TOOLS_ARCH=arm-linux-androideabi
-TARGET_NAME=arm-linux-androideabi
-CPU_ARCH=armv6
-RELEASE_ARCH_DIR=armeabi
-GCC_VERSION=4.6
-TOOLNAME_PREFIX=arm-linux-androideabi
-build_with_arch
+# # Build with armv6
+# TOOLS_ARCH=arm-linux-androideabi
+# TARGET_NAME=arm-linux-androideabi
+# CPU_ARCH=armv6
+# RELEASE_ARCH_DIR=armeabi
+# GCC_VERSION=4.6
+# TOOLNAME_PREFIX=arm-linux-androideabi
+# build_with_arch
 
 # Build with armv7
 TOOLS_ARCH=arm-linux-androideabi
@@ -176,20 +176,20 @@ GCC_VERSION=4.9
 TOOLNAME_PREFIX=arm-linux-androideabi
 build_with_arch
 
-# Build with arm64
-TOOLS_ARCH=aarch64-linux-android
-TARGET_NAME=aarch64-linux-android
-CPU_ARCH=arm64
-RELEASE_ARCH_DIR=arm64
-GCC_VERSION=4.9
-TOOLNAME_PREFIX=aarch64-linux-android
-build_with_arm64
+# # Build with arm64
+# TOOLS_ARCH=aarch64-linux-android
+# TARGET_NAME=aarch64-linux-android
+# CPU_ARCH=arm64
+# RELEASE_ARCH_DIR=arm64
+# GCC_VERSION=4.9
+# TOOLNAME_PREFIX=aarch64-linux-android
+# build_with_arm64
 
-# Build with x86
-TOOLS_ARCH=x86
-TARGET_NAME=i686-linux-android
-CPU_ARCH=i686
-RELEASE_ARCH_DIR=x86
-GCC_VERSION=4.6
-TOOLNAME_PREFIX=i686-linux-android
-build_with_arch
+# # Build with x86
+# TOOLS_ARCH=x86
+# TARGET_NAME=i686-linux-android
+# CPU_ARCH=i686
+# RELEASE_ARCH_DIR=x86
+# GCC_VERSION=4.6
+# TOOLNAME_PREFIX=i686-linux-android
+# build_with_arch
